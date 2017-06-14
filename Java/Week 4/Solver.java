@@ -1,10 +1,11 @@
-/* Models the A* search algorithm that finds the optimal solution to any variant of the 8-puzzle. The class SearchNode represents a Board, the # of moves it took 
- * to get to that Board, and the previous Board. Solver initializes two SearchNodes, a given initial and a twin that has two tiles swapped, and runs move operations
- * on both of those SearchNodes simultaneously. The next move for each of the two tracks (initial and twin) will be determined by a respective minimum priority
- * queue (again, initial and twin) that is determine by manhattan priority. For each board state of the two tracks, their neighbors (all possible board states 
- * within one move) will be added to their priority queues, and the board on the queue with the overall minimum manhattan priority will become the board of the 
- * next node. This process will repeat with successive nodes until either the twin or initial node track reaches the goal. From there, a number of methods
- * return useful properties, like whether or not the initial Board was solvable, and if so, how many moves it took.*/
+/* Models the A* search algorithm that finds the optimal solution to any variant of the 8-puzzle. The class SearchNode represents a 
+ * Board, the # of moves it took to get to that Board, and the previous Board. Solver initializes two SearchNodes, a given initial and a
+ * twin that has two tiles swapped, and runs move operations on both of those SearchNodes simultaneously. The next move for each of the 
+ * two tracks (initial and twin) will be determined by a respective minimum priority queue (again, initial and twin) that is determine 
+ * by manhattan priority. For each board state of the two tracks, their neighbors (all possible board states within one move) will be 
+ * added to their priority queues, and the board on the queue with the overall minimum manhattan priority will become the board of the 
+ * next node. This process will repeat with successive nodes until either the twin or initial node track reaches the goal. From there, 
+ * a number of methods return useful properties, like whether or not the initial Board was solvable, and if so, how many moves it took.*/
 
 import edu.princeton.cs.algs4.MinPQ;
 import java.util.ArrayList;
